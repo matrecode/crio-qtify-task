@@ -28,8 +28,8 @@
 }
 
 .chip {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: black !important;
+  color: white !important;
 }
 
 .titleWrapper {
