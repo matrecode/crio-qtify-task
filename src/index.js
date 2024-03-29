@@ -2,14 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "./components/theme.js";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>
+	<React.StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>
 );

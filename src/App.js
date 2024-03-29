@@ -1,33 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Card from "./components/Cards/Card";
-import { fetchTopAlbums } from "./api/api";
-import Section from "./components/Section/Section";
-import styles from "./App.module.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import AlbumDetails from "./pages/AlbumDetails/AlbumDetails";
 
 function App() {
-  const [topAlbumData, setTopAlbumData] = useState([]);
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<LandingPage />} />
 
-  const generateTopAlbumData = async () => {
-    const data = await fetchTopAlbums();
-    console.log("data", data);
-    setTopAlbumData(data);
-  };
+				<Route path="/album/:slug" element={<AlbumDetails />} />
 
-  useEffect(() => {
-    generateTopAlbumData();
-  }, []);
-  return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <Card />
-      <div className={styles.sectionWrapper}>
-        <Section title="Top Albums" data={topAlbumData} type="album" />
-      </div>
-    </>
-  );
+				<Route path="*" element={<LandingPage />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
