@@ -1,23 +1,31 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
-import Headphone from "../../assets/headphone.svg";
+// import { ReactComponent as FirstBanner } from "../../assets/100 Thousand Songs, ad-free.svg";
+// import { ReactComponent as SecondBanner } from "../../assets/Over thousands podcast episodes.svg";
+import { ReactComponent as Headphone } from "../../assets/headphone.svg";
 
 const HeroSection = () => {
-	return (
-		<>
-			<div className={styles.wrapper}>
-				<div className={styles.heroImageWrapper}>
-					<div className={styles.banner}>
-						<h1>100 Thousand Songs, ad free</h1>
-						<h1>Over thousands podcast episodes</h1>
-					</div>
-					<div>
-						<img src={Headphone} alt="Headphone" height="212px" width="212px" />
-					</div>
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className={styles.wrapper}>
+        <div className={styles.heroImageWrapper}>
+          <div className={styles.banner}>
+            <span>
+              {/* <FirstBanner /> */}
+              100 Thousand Songs, ad-free
+            </span>
+            <span>
+              {/* <SecondBanner /> */}
+              Over thousands podcast episodes
+            </span>
+          </div>
+          <div>
+            <Headphone />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default HeroSection;
