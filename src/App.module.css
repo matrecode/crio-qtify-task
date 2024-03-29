@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -54,4 +54,11 @@
 
 body {
   background-color: var(--black-color);
+} */
+
+.sectionWrapper {
+  padding: 0px 30px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

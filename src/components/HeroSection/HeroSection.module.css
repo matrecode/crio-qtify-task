@@ -4,7 +4,7 @@
   align-items: center;
   width: 100vw;
   height: 270px;
-  background-color: var(--black-color);
+  background-color: var(--color-black);
 }
 
 .heroImageWrapper {
@@ -18,9 +18,9 @@
 .banner {
   display: flex;
   flex-direction: column;
-  color: var(--while-color);
-  width: 605px;
-  height: 100px;
+  color: var(--color-white);
+  width: 37.8125rem; /* 605px converted to rem */
+  text-align: center;
 }
 
 .banner span {
@@ -41,4 +41,25 @@
   /* margin-left: 20px; */
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 48rem) {
+  /* 768px converted to rem */
+  .wrapper {
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .heroImageWrapper {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .banner {
+    width: 100%; /* Adjust width for smaller screens */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .banner h1 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
 }
