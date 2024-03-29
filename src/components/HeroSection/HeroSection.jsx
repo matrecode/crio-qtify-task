@@ -11,10 +11,12 @@ const HeroSection = () => {
         <div className={styles.heroImageWrapper}>
           <div className={styles.banner}>
             <span>
-              <FirstBanner />
+              {/* <FirstBanner /> */}
+              100 Thousand Songs, ad-free
             </span>
             <span>
-              <SecondBanner />
+              {/* <SecondBanner /> */}
+              Over thousands podcast episodes
             </span>
           </div>
           <div>
