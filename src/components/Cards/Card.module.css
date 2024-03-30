@@ -4,7 +4,7 @@
   align-items: flex-start;
   gap: 6px;
   width: 160px;
-  height: 232px;
+  height: auto;
 }
 
 .card {
@@ -36,4 +36,19 @@
   margin-top: 6px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.titleWrapper p {
+  font-size: medium;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pill {
+  font-size: 12px;
+  background-color: var(--color-black);
+  width: max-content;
+  padding: 6px;
+  border-radius: 10px;
 }
